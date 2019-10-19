@@ -10,6 +10,7 @@ typedef struct {
 	bool button : 1;
 	byte channel : 2;
 	float temp;
+	byte humidity;
 } PrologueData;
 
 class PrologueDecoder {
