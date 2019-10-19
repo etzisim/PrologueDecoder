@@ -83,7 +83,7 @@ void PrologueDecoder::decodeRawData(){
 	data.button = (rawData[1]&0x04);
 	data.channel = (rawData[1]&0x03) + 1;
 	data.temp = (((int16_t)(((uint16_t)rawData[2] << 8) | (rawData[3]&0xF0)))/16)*0.1;
-	
+	data.humidity = (rawData[3] << 4) | (rawData[4] / 16 );	
 }
 
 
